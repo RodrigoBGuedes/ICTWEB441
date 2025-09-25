@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title> Simple form demo </title>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif; 
+                margin: 20px;
+            }
+            form {margin-bottom: 20px;}
+            label {display: block; 
+                margin-top: 10px;
+            }
+            input, select, button {
+                padding: 8px; 
+                margin-top: 4px; 
+                display: block; 
+                width: 250px;
+            }
+            #message {
+                margin-top: 15px; 
+                font-weight: bold; 
+                color: green;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Simple Form Submition</h1>
+
+        <!-- Form -->
+         <form id="myForm" onsubmit="showMessage(); return false">
+            <label>
+                Full name:
+                <input type="text" id="name">
+            </label>
+
+            <label>
+                Email:
+                <input type="email" id="email" required>
+            </label>
+
+            <label>
+                Password:
+                <input type="password" id="password" required minlength="6">
+            </label>
+
+            <label>
+                Gender:
+                <select id="gender" required>
+                    <option value=""> -- Select -- </option>
+                    <option > Male </option>
+                    <option > Female </option>
+                    <option > Other </option>
+                </select>
+            </label>
+
+            <label>
+                Phone:
+                <input type="tel" id="phone" placeholder="eg 0423 012 345">
+            </label>
+
+            <label>
+                Address:
+                <input type="text" id="address">
+            </label>
+
+            <button type="submit">Submit</button> 
+            <input type="button" value="Reset Form" onclick="resetFunction()">
+         </form>
+
+         <!-- Where the message will appear -->
+          <div id="message"></div>
+          <script src="javascript.js"></script>
+
+    </body>
+</html>
